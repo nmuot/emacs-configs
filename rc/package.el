@@ -1,0 +1,40 @@
+;;; Emacs is not a package manager, and here we load its package manager!
+
+(require 'package)
+(dolist (source '(;("gnu" . "http://elpa.gnu.org/packages/")
+                  ;("marmalade" . "http://marmalade-repo.org/packages/")
+                  ;("elpa" . "http://tromey.com/elpa/")
+                  ;("elpy" . "https://jorgenschaefer.github.io/packages/")
+                  ;; TODO: Maybe, use this after emacs24 is released
+                  ;; (development versions of packages)
+                  ("melpa" . "http://melpa.org/packages/")
+                  ))
+  (add-to-list 'package-archives source t))
+
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+
+(defvar myPackages
+  '(better-defaults
+    material-theme
+    column-marker
+    ido
+    ispell
+    ein  ;; jupyter notebook
+    let-alist
+    cl-generic
+    seq
+    elpy  ;; python mode
+    flycheck
+    py-autopep8
+    magit  ;; Git
+    markdown-mode
+    ))
+
+
+(mapc #'(lambda (package)
+    (unless (package-installed-p package)
+      (package-install package)))
+      myPackages)
