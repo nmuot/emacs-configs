@@ -28,15 +28,17 @@
 ;; Pierre Boulet
 ;; Sébastien Dinot
 
-;; Inhiber l'affichage du message d'accueil
-(setq inhibit-startup-message t)
-
 ;;##########################################################
 ;; Configure some major and minor mode
 (load "~/.emacs.d/rc/package.el")
+(load "~/.emacs.d/rc/general.el")
 (load "~/.emacs.d/rc/theme.el")
 (load "~/.emacs.d/rc/ido-mode.el")
 (load "~/.emacs.d/rc/ispell.el")
 
 (load "~/.emacs.d/rc/python.el")
 (load "~/.emacs.d/rc/markdown.el")
+(load "~/.emacs.d/rc/c-style.el")
+(load "~/.emacs.d/rc/cl.el")
+(load "~/.emacs.d/rc/cmake.el")
+

@@ -1,5 +1,7 @@
 *~
+.*
 *.elc
+*.eld
 elpa
 backups
 ido.last
