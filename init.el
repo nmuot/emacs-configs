@@ -40,9 +40,16 @@
 
 (require 'setup-markdown)
 
+(require 'setup-python)
+
 (require 'setup-c)
 (require 'setup-cl)
 (require 'setup-cmake)
 
-(require 'setup-python)
+;; Experiement https://tuhdo.github.io/c-ide.html
+;; https://github.com/tuhdo/emacs-c-ide-demo
+(require 'setup-helm)
+(require 'setup-helm-gtags)
+(require 'setup-cedet)
+(require 'setup-editing)
 

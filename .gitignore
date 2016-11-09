@@ -6,3 +6,5 @@ elpa
 backups
 ido.last
 places
+ede-projects.el
+semanticdb
