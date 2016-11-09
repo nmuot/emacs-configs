@@ -30,3 +30,5 @@
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 (add-hook 'python-mode-hook (lambda () (interactive) (column-marker-1 79)))
+
+(provide 'setup-python)

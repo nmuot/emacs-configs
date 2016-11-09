@@ -30,15 +30,19 @@
 
 ;;##########################################################
 ;; Configure some major and minor mode
-(load "~/.emacs.d/rc/package.el")
-(load "~/.emacs.d/rc/general.el")
-(load "~/.emacs.d/rc/theme.el")
-(load "~/.emacs.d/rc/ido-mode.el")
-(load "~/.emacs.d/rc/ispell.el")
+(load "~/.emacs.d/setup-package.el")
+(add-to-list 'load-path "~/.emacs.d/rc")
 
-(load "~/.emacs.d/rc/python.el")
-(load "~/.emacs.d/rc/markdown.el")
-(load "~/.emacs.d/rc/c-style.el")
-(load "~/.emacs.d/rc/cl.el")
-(load "~/.emacs.d/rc/cmake.el")
+(require 'setup-general)
+(require 'setup-theme)
+(require 'setup-ido)
+(require 'setup-ispell)
+
+(require 'setup-markdown)
+
+(require 'setup-c)
+(require 'setup-cl)
+(require 'setup-cmake)
+
+(require 'setup-python)
 

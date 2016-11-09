@@ -19,3 +19,5 @@
 (add-hook 'c-mode-common-hook 'flyspell-prog-mode)
 (add-hook 'lisp-mode-hook 'flyspell-prog-mode)
 (add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode)
+
+(provide 'setup-ispell)

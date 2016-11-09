@@ -6,4 +6,6 @@
 (ido-mode 1)
 
 (setq ido-file-extensions-order
-'(".py" ".c" ".cpp" ".h" ".f90" ".rst" ".txt" ".el" ".ini" ".cfg" ".cnf"))
+      '(".py" ".c" ".cpp" ".h" ".f90" ".rst" ".txt" ".el" ".ini" ".cfg" ".cnf"))
+
+(provide 'setup-ido)

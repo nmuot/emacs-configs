@@ -17,3 +17,4 @@
 ;;(color-theme-subdued)
 ;;(set-face-attribute 'default nil :height 110)
 
+(provide 'setup-theme)
