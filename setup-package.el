@@ -32,6 +32,7 @@
     let-alist
     cl-generic
     seq
+    pyvenv
     elpy  ;; python mode
     flycheck
     py-autopep8
