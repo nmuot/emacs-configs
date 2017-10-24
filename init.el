@@ -13,18 +13,19 @@
 
 (setq user-full-name "Nathanaël MUOT")
 (setq user-mail-address "nathanael.muot@axessim.fr")
+(setq organization-name "AxesSim")
 
 
 ;; J'ai pillé le travail de nombreuses personnes pour réaliser ce .emacs
-;; En voici la liste non exhaustive : 
+;; En voici la liste non exhaustive :
 
 ;; https://realpython.com/blog/python/emacs-the-best-python-editor/
 ;; Alex (Alexey) Ott http://alexott.net/en/index.html
 ;; Philippe Dumont
 ;; Jonathan Bailleul
-;; Laurent Schurter 
+;; Laurent Schurter
 ;; Stéphane Levant
-;; Philippe Marquet 
+;; Philippe Marquet
 ;; Pierre Boulet
 ;; Sébastien Dinot
 
