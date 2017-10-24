@@ -33,10 +33,13 @@
 (load "~/.emacs.d/setup-package.el")
 (add-to-list 'load-path "~/.emacs.d/rc")
 
+
+
 (require 'setup-general)
 (require 'setup-theme)
 (require 'setup-ido)
 (require 'setup-ispell)
+(require 'setup-latex)
 
 (require 'setup-markdown)
 
@@ -52,4 +55,3 @@
 (require 'setup-helm-gtags)
 (require 'setup-cedet)
 (require 'setup-editing)
-

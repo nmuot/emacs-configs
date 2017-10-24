@@ -37,6 +37,8 @@
     py-autopep8
     magit  ;; Git
     markdown-mode
+    auctex
+    auto-yasnippet
     ))
 
 
