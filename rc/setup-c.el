@@ -37,6 +37,7 @@
 ;; hs-minor-mode for folding source code
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 
+
 ;; doxymacs configure
 (require 'doxymacs)
 
@@ -68,5 +69,9 @@
       (doxymacs-font-lock)))
 (add-hook 'font-lock-mode-hook 'my-doxymacs-font-lock-hook)
 
-(provide 'setup-c)
+;(use-package cc-mode
+;  :init
+;  (define-key c-mode-map  [(tab)] 'company-complete)
+;  (define-key c++-mode-map  [(tab)] 'company-complete))
 
+(provide 'setup-c)
