@@ -7,7 +7,8 @@
                   ;("elpy" . "https://jorgenschaefer.github.io/packages/")
                   ;; TODO: Maybe, use this after emacs24 is released
                   ;; (development versions of packages)
-                  ("melpa" . "http://melpa.org/packages/")
+                  ;("melpa" . "http://melpa.org/packages/")
+		  ("melpa-stable" . "https://stable.melpa.org/packages/")
                   ))
   (add-to-list 'package-archives source t))
 
@@ -25,14 +26,15 @@
 (defvar myPackages
   '(better-defaults
     material-theme
-    column-marker
+    ;; column-marker
     ido
     ispell
-    ein  ;; jupyter notebook
-    let-alist
-    cl-generic
-    seq
-    pyvenv
+    ;; ein  ;; jupyter notebook
+    ;; let-alist
+    ;; cl-generic
+    ;; seq
+    ;; pyvenv
+    yasnippet
     elpy  ;; python mode
     flycheck
     py-autopep8

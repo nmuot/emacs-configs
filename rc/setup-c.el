@@ -2,10 +2,11 @@
 ; Inspired from: Baris Yuksel (2014) http://barisyuksel.com/cppmode/.emacs
 
 (setq auto-mode-alist (cons '("\.inc$" . c++-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\.inl$" . c++-mode) auto-mode-alist))
 
 
 ; start google-c-style with emacs
-(use-package google-c-style)
+(require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (setq c-default-style "bsd")
@@ -28,18 +29,7 @@
 (add-hook 'c++-mode-hook 'my:flymake-google-init)
 (add-hook 'cc-mode-hook 'my:flymake-google-init)
 
-
-;; company-c-headers
-(use-package company-c-headers
-  :init
-  (add-to-list 'company-backends 'company-c-headers))
-
 ;; hs-minor-mode for folding source code
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
-
-;(use-package cc-mode
-;  :init
-;  (define-key c-mode-map  [(tab)] 'company-complete)
-;  (define-key c++-mode-map  [(tab)] 'company-complete))
 
 (provide 'setup-c)
