@@ -55,4 +55,14 @@
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (windmove-default-keybindings)
 
+; active autopair
+(use-package autopair
+  :init
+  (autopair-global-mode 1)
+  (setq autopair-autowrap t))
+
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/snippets")
+
 (provide 'setup-general)

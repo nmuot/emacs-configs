@@ -16,10 +16,7 @@
 (use-package flymake-google-cpplint)
 (defun my:flymake-google-init ()
   (custom-set-variables
-   '(flymake-google-cpplint-command "~/local/bin/cpplint")
-   '(flymake-google-cpplint-verbose "3")
-   '(flymake-google-cpplint-linelength "100")
-   '(flymake-google-cpplint-filter "-whitespace/line_length")
+   '(flymake-google-cpplint-command "/home/nathanael/workspace/mustard/resources/cpplint/cpplint.sh")
    )
   (flymake-google-cpplint-load)
 )

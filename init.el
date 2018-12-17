@@ -67,12 +67,21 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(doxymacs-file-comment-template doxymacs-my-file-comment-template)
+ '(flymake-google-cpplint-command "~/local/bin/cpplint")
+ '(flymake-google-cpplint-filter "-whitespace/line_length")
+ '(flymake-google-cpplint-linelength "100")
+ '(flymake-google-cpplint-verbose "3")
  '(package-selected-packages
    (quote
-    (zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu)))
+ '(safe-local-variable-values
+   (quote
+    ((company-clang-arguments "-I/home/nathanael/workspace/mustard/src/core/src" "-I/home/nathanael/workspace/mustard/src/amelet/src" "-I/home/nathanael/workspace/mustard/src/geometry/src" "-I/home/nathanael/workspace/mustard/src/mesh/src" "-I/home/nathanael/workspace/mustard/src/structured/src" "-I/home/nathanael/workspace/mustard/src/unstructured/src")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'scroll-left 'disabled nil)
