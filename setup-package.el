@@ -1,15 +1,18 @@
 ;;; Emacs is not a package manager, and here we load its package manager!
 
 (require 'package)
-(dolist (source '(;("gnu" . "http://elpa.gnu.org/packages/")
-                  ;("marmalade" . "http://marmalade-repo.org/packages/")
-                  ;("elpa" . "http://tromey.com/elpa/")
-                  ;("elpy" . "https://jorgenschaefer.github.io/packages/")
-                  ;; TODO: Maybe, use this after emacs24 is released
-                  ;; (development versions of packages)
-                  ("melpa" . "http://melpa.org/packages/")
-                  ))
-  (add-to-list 'package-archives source t))
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+(package-initialize)
+
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -25,14 +28,15 @@
 (defvar myPackages
   '(better-defaults
     material-theme
-    column-marker
+    ;; column-marker
     ido
     ispell
-    ein  ;; jupyter notebook
-    let-alist
-    cl-generic
-    seq
-    pyvenv
+    ;; ein  ;; jupyter notebook
+    ;; let-alist
+    ;; cl-generic
+    ;; seq
+    ;; pyvenv
+    yasnippet
     elpy  ;; python mode
     flycheck
     py-autopep8

@@ -17,7 +17,6 @@
 
 
 (elpy-enable)
-(elpy-use-ipython)
 (setq elpy-set-backend "jedi")
 
 ;; use flycheck not flymake with elpy
