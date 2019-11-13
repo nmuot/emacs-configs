@@ -86,3 +86,4 @@
  )
 (put 'scroll-left 'disabled nil)
 
+(put 'narrow-to-page 'disabled nil)
